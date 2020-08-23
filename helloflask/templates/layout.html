@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- {% if title %}
+      <title>Flask 블로그 - {{ title }}</title>
+    {% else %}
+      <title>Flask 블로그</title>
+      {% endif %} -->
+    <link rel="stylesheet" type ="text/css" href="{{ url_for('static', filename = 'css/layout.css') }}">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="{{ url_for('mainPage') }}">Main</a>
+        <a href="{{ url_for('index') }}">index</a>
+        <a href="{{ url_for('recording') }}">Recording</a>
+      </nav>
+      <hr>
+    </header>
+
+    <main role="main">
+    <!-- Main content block -->
+    {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

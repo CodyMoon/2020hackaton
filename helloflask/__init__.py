@@ -1,36 +1,36 @@
-from flask import Flask, make_response,g, Response
-from flask import render_template, Markup
+from datetime import datetime
+
+from flask import Flask, render_template
 
 app = Flask(__name__)
-app.debug = True
-app.jinja_env.trim_blocks = True
 
-@app.route('/res1')
-def res1():
-    custom_res = Response("Custom Response", 200, {'test': 'ttt'})
-    return make_response(custom_res)
+posts = [
+    {
+        'author': {
+            'username': 'test-user'
+        },
+        'title': '첫 번째 아니아니',
+        'content': '첫 번째 아니 내용입니다.',
+        'date_posted': datetime.strptime('2018-08-01', '%Y-%m-%d')
+    },
+    {
+        'author': {
+            'username': 'test-user'
+        },
+        'title': '세 번째 포스트',
+        'content': '두 번째 포스트 내용입니다.',
+        'date_posted': datetime.strptime('2018-08-03', '%Y-%m-%d')
+    },
+]
 
-# @app.before_request
-# def before_request():
-#     print("before_request!!!")  #/gg 로 다음페이지를 넘길수있음.
-#     g.str="Korean"
+@app.route('/')
+def mainPage():
+    return render_template('index.html', posts=posts)
 
-@app.route("/tmpl")
-def t():
-    tit = Markup("<strong>Title</strong>")
-    mu = Markup("<h1>iii = <i>%s</i></h1>")
-    h = mu % "Italic"
-    print("h=", h)
+@app.route('/index')
+def index():
+    return render_template('dropFile.html', title='File')
 
-    lst = [("Meet1", "kim"), ("meet2", "sa")]
-    
-    return render_template('index.html', title=tit, mu = h, lst = lst)
-
-@app.route("/gg")
-def helloworld2():
-    return "Hello World!" + getattr(g,'str','111')
-
-@app.route("/")
-def helloworld():
-    return "Hello Flask World!"
-
+@app.route('/recording')
+def recording():
+  return render_template('recording.html', title='Recording')
