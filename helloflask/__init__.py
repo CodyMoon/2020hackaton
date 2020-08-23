@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request,redirect
 import speech_recognition as sr
+from summarizer import Summarizer
 
 app = Flask(__name__)
 
@@ -10,6 +11,7 @@ def index():
 @app.route('/upload', methods=["GET" , "POST"])
 def upload():
     transcript=""
+    result=""
     if request.method == "POST":
         print("FORM DATA RECEIVED")
 
@@ -25,9 +27,13 @@ def upload():
             audioFile = sr.AudioFile(file)
             with audioFile as source:
                 data = recognizer.record(source)
-            transcript = recognizer.recognize_google(data, key=None)
-
-    return render_template('upload.html', transcript = transcript)
+            # transcript = recognizer.recognize_google(data, key=None)
+            transcript = recognizer.recognize_sphinx(data)
+            model = Summarizer()
+            result = model(transcript)
+            full = ''.join(result)
+            print(full)
+    return render_template('upload.html', result = result)
 
 @app.route('/recording')
 def recording():
