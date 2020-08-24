@@ -1,8 +1,26 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<div>
-    
-  Template123
+<style type = "text/css">
+  .jumbotron {
+    min-height:600px;
+    background-image: url('/static/img/mainpage.png');
+    background-size: cover;
+    text-shadow: black 0.2 0.2 0.2;
+    color: white;
+  }
+  li {
+    margin: 15px;
+  }
+</style>
+<div class ="container">
+  <div class="jumbotron">
+    <h1 class="text=center" style="font-size:40px">Introduce out transcribe web page.</h1>
+    <p class = "text-center" style="font-size:30px">Our web page can do....</p>
+    <li style="font-size:20px">Record voice and transcribe</li>
+    <li style="font-size:20px">Transcribe the WAV file</li>
+    <li style="font-size:20px">Make summary of texts</li>
+
+  </div>
 </div>
 {% endblock %}

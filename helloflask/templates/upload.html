@@ -1,22 +1,29 @@
 {% extends 'layout.html' %}
 
-{% block head %}
-<h1>template</h1>
-{% endblock %}
-
 {% block content %}
+<style>
+p{
+    background-color: lightgrey;
+    border: 10px solid green;
+    text-align:center;
+    width:fit-content;
+    margin:50px;
+    text-indent: 30px;
+    font-size: 20px;
+}
+</style>
 <div id="speechContainer">
-    <h1>Upload new File</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="file"/>
+    <h1 style="margin-left: 50px">Upload new File</h1>
+    <form method="POST" enctype="multipart/form-data" >
+        <input type="file" name="file" style="margin: 20px 50px">
         <br>
-        <input type="submit" value = "Transcribe"/>
-    </form>
+        <input type="submit" value = "Transcribe" style="margin: 20px 50px">
+    </form> 
 
     {% if result != "" %}
     <div id="speechTranscriptContainer">
-        <h1>Transcript</h1>
-        <p>{{result}}</p>
+        <h1 style="margin-left:50px"><i>Summary:<i></h1>      
+                <p>{{result}}</p>
     </div>
     {% endif %}
 {% endblock %}
