@@ -4,45 +4,15 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ url_for('static',filename='css/layout.css') }}">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-    }
-    
-    .topnav a {
-      float: left;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-    }
-    
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-    
-    .topnav a.active {
-      background-color: #4CAF50;
-      color: white;
-    }
-    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel= "stylesheet" href= "{{ url_for('static',filename='css/style.css') }}">
 </head>
 <body>
-  <nav class="topnav">
-    <li><a href="index">Main </a></li>
-    <li><a href="recording">Recording </a></li>
-    <li><a href="upload">Upload File </a></li>
-  </nav>
+  <div class="topnav">
+    <a href="index">Main </a>
+    <a href="recording">Recording </a>
+    <a href="upload">Upload File </a>
+  </div>
 
   {% block content %}{% endblock %}
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
