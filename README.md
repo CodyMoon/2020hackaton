@@ -22,8 +22,8 @@ Windows 10 64bit
 * python main.py
 * Recording is realtime recording.
 * Upload File
-  Choose the wav file only.  
-  Click the transcribe button
+* Choose the wav file only.  
+* Click the transcribe button
 
 **3. Future work**
 * Save button add
