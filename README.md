@@ -2,7 +2,7 @@
 
 First Website
 
-#1.Installation
+**1.Installation
 
 pip install torch  
 pip install bert-extractive-summarizer  
@@ -19,7 +19,7 @@ The code is tested python 3.6
 Supported Environment
 Windows 10 64bit
 
-#2. How to Use
+**2. How to Use
 * Recording is realtime recording.
 * Upload File
   Choose the wav file only.
