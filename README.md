@@ -15,7 +15,6 @@ pip install SpeechRecognition
 pip install pocketsphinx 
 The code is tested python 3.6
 
-
 Supported Environment
 Windows 10 64bit
 
@@ -33,5 +32,5 @@ Windows 10 64bit
 
 
 **4. License**
-* 
+* MIT License
   
