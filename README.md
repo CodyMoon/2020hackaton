@@ -12,7 +12,7 @@ pip install neuralcoref
 pip install flask  
 pip install pydub  
 pip install SpeechRecognition  
-
+pip install pocketsphinx 
 The code is tested python 3.6
 
 
@@ -20,8 +20,18 @@ Supported Environment
 Windows 10 64bit
 
 **2. How to Use**
+* python test.py
 * Recording is realtime recording.
 * Upload File
-  Choose the wav file only.
+  Choose the wav file only.  
   Click the transcribe button
+
+**3. Future work**
+* Save button add
+* Recording improvement  
+* Various summarizer algorithm test
+
+
+**4. License**
+* 
   
