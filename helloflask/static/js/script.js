@@ -1,5 +1,7 @@
  /*chrome and some chromium based*/ 
-var recognition = new SpeechRecognition()
+var speechRecognition = window.webkitSpeechRecognition
+
+var recognition = new speechRecognition()
 
 var textbox = $("#textbox")
 
