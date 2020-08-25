@@ -19,7 +19,7 @@ Supported Environment
 Windows 10 64bit
 
 **2. How to Use**
-* python test.py
+* python main.py
 * Recording is realtime recording.
 * Upload File
   Choose the wav file only.  
