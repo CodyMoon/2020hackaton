@@ -30,7 +30,8 @@ Windows 10 64bit
 * Recording improvement  
 * Various summarizer algorithm test
 
-
-**4. License**
+**4. Screen shot**
+![ex_screenshot](./Screenshot/mainpage.png)
+**5. License**
 * MIT License
   
