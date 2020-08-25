@@ -12,7 +12,7 @@ pip install neuralcoref
 pip install flask  
 pip install pydub  
 pip install SpeechRecognition  
-pip install pocketsphinx 
+pip install pocketsphinx  
 The code is tested python 3.6
 
 Supported Environment
