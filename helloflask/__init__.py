@@ -28,12 +28,10 @@ def upload():
             audioFile = sr.AudioFile(file)
             with audioFile as source:
                 data = recognizer.record(source)
-            # transcript = recognizer.recognize_google(data, key=None)
             transcript = recognizer.recognize_sphinx(data)
             model = Summarizer()
             result = model(transcript)
-            full = ''.join(result)
-            print(full)
+
     return render_template('upload.html', result = result)
 
 @app.route('/recording')
